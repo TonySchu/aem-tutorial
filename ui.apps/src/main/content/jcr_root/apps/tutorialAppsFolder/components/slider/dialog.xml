@@ -1,13 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="cq:Dialog"
-    title="Properties"
+    title="Sliderkonfiguration"
     xtype="panel">
     <items jcr:primaryType="cq:WidgetCollection">
-        <text
-            jcr:primaryType="cq:Widget"
-            fieldLabel="Text"
-            name="./text"
-            xtype="textfield"/>
+
+        <arrows jcr:primaryType="nt:unstructured"
+                fieldLabel="Pfeile anzeigen" name="./arrows" xtype="checkbox"/>
+
+        <images jcr:primaryType="cq:Widget"
+                fieldLabel="Bilder"
+                name="./bilder"
+                xtype="multifield">
+            <fieldConfig jcr:primaryType="nt:unstructured"
+                         allowBlank="false"
+                         limit="{Long}2"
+                         xtype="pathfield"/>
+        </images>
+
+        <headlines jcr:primaryType="cq:Widget"
+                fieldLabel="Bildüberschriften"
+                name="./headlines"
+                xtype="multifield">
+            <fieldConfig jcr:primaryType="nt:unstructured"
+                         allowBlank="false"
+                         limit="{Long}2"
+                         xtype="textfield"/>
+        </headlines>
+
+        <texts jcr:primaryType="cq:Widget"
+                   fieldLabel="Bildertexte"
+                   name="./texts"
+                   xtype="multifield">
+            <fieldConfig jcr:primaryType="nt:unstructured"
+                         allowBlank="false"
+                         limit="{Long}2"
+                         xtype="textarea"/>
+        </texts>
+
+
     </items>
 </jcr:root>
