@@ -7,41 +7,6 @@
 
         <arrows jcr:primaryType="nt:unstructured"
                 fieldLabel="Pfeile anzeigen" name="./arrows" xtype="checkbox"/>
-
-        <images jcr:primaryType="cq:Widget"
-                fieldLabel="Bilder"
-                name="./bilder"
-                xtype="multifield">
-            <fieldConfig jcr:primaryType="nt:unstructured"
-                         allowBlank="false"
-                         limit="{Long}2"
-                         xtype="pathfield"/>
-        </images>
-
-        <headlines jcr:primaryType="cq:Widget"
-                fieldLabel="Bildüberschriften"
-                name="./headlines"
-                xtype="multifield">
-            <fieldConfig jcr:primaryType="nt:unstructured"
-                         allowBlank="false"
-                         limit="{Long}2"
-                         xtype="textfield"/>
-        </headlines>
-
-        <texts jcr:primaryType="cq:Widget"
-                   fieldLabel="Bildertexte"
-                   name="./texts"
-                   xtype="multifield">
-            <fieldConfig jcr:primaryType="nt:unstructured"
-                         allowBlank="false"
-                         limit="{Long}2"
-                         xtype="textarea"/>
-        </texts>
-
-
-
-
-
         <!-- dynamisches multifield -->
         <bilder
                 jcr:primaryType="cq:Widget"

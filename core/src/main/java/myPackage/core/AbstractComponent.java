@@ -29,8 +29,22 @@ public class AbstractComponent extends WCMUsePojo{
     }
 
     public JSONArray getJSONArray(String attr){
-        String jsonArrayString = getText(attr);
-        JSONArray jsonArray = 
+        JSONArray jsonArray = new JSONArray();
+
+        //build jsonString [{},{},{}...]
+        String jsonString = "[";
+        for (String s: getList(attr)) {
+            jsonString += s + ",";
+        }
+        jsonString += "]";
+
+        try {
+            jsonArray = new JSONArray(jsonString);
+        }catch (Exception e){
+
+        }
+
+        return jsonArray;
 
 
     }

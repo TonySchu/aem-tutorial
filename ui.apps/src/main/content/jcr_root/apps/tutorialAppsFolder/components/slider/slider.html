@@ -1,21 +1,17 @@
 
 <h2 data-sly-test="${!properties.bilder && !publishMode}" style="color: red;">Bitte den Slider konfigurieren!</h2>
 
-<p data-sly-use.slider="myPackage.core.models.SliderModel">
-    Unsere Bilder aus der SliderKlasse: ${slider.bilder}
-    EditmodeTest: ${slider.editMode}
-</p>
 
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol data-sly-list="${properties.bilder}" class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="${itemList.index}" class="${itemList.index == 0 ? 'active' : ''}"></li>
+<div data-sly-use.slider="myPackage.core.models.SliderModel" id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol data-sly-list.sliderEL="${slider.sliderElements}" class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="${itemList.index}" class="${sliderEl.cssClass}"></li>
     </ol>
     <div class="carousel-inner" role="listbox">
-        <div data-sly-repeat="${properties.bilder}" class="${itemList.index == 0 ? 'active' : ''} carousel-item">
-            <img class="d-block img-fluid" src="${item}">
-            <div class="carousel-caption d-none d-md-block">
-                <h3>${properties.headlines[itemList.index]}</h3>
-                <p>${properties.texts[itemList.index]}</p>
+        <div data-sly-repeat.sliderEL="${slider.sliderElements}" class="${sliderEl.cssClass} carousel-item">
+            <img class="d-block img-fluid" src="${sliderEl.path}" alt="${sliderEl.alt}">
+            <div class="carousel-caption d-none d-md-block" data-sly-test="${sliderEl.hasText}">
+                ${sliderEl.headLine @context='html'}
+                ${sliderEl.text @context='html'}
             </div>
         </div>
     </div>
