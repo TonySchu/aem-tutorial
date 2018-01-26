@@ -1,6 +1,11 @@
 
 <h2 data-sly-test="${!properties.bilder && !publishMode}" style="color: red;">Bitte den Slider konfigurieren!</h2>
 
+<p data-sly-use.slider="myPackage.core.models.SliderModel">
+    Unsere Bilder aus der SliderKlasse: ${slider.bilder}
+    EditmodeTest: ${slider.editMode}
+</p>
+
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol data-sly-list="${properties.bilder}" class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="${itemList.index}" class="${itemList.index == 0 ? 'active' : ''}"></li>
