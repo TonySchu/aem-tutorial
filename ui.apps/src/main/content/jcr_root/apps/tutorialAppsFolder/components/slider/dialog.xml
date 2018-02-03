@@ -5,6 +5,22 @@
     xtype="panel">
     <items jcr:primaryType="cq:WidgetCollection">
 
+        <metadata
+
+                jcr:primaryType="cq:Widget"
+
+                fieldDescription="some description of the field"
+
+                fieldLabel="field label"
+
+                name="./dropdown"
+
+                options="/bin/test.json"
+
+                type="select"
+
+                xtype="selection"/>
+
         <arrows jcr:primaryType="nt:unstructured"
                 fieldLabel="Pfeile anzeigen" name="./arrows" xtype="checkbox"/>
         <!-- dynamisches multifield -->
