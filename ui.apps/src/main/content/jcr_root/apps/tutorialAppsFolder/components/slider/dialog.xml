@@ -4,7 +4,7 @@
     title="Sliderkonfiguration"
     xtype="panel">
     <items jcr:primaryType="cq:WidgetCollection">
-
+        
         <arrows jcr:primaryType="nt:unstructured"
                 fieldLabel="Pfeile anzeigen" name="./arrows" xtype="checkbox"/>
         <!-- dynamisches multifield -->
