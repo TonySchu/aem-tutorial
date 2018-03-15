@@ -4,6 +4,12 @@
     title="Sliderkonfiguration"
     xtype="panel">
     <items jcr:primaryType="cq:WidgetCollection">
+
+        <select jcr:primaryType="nt:unstructured"
+                fieldLabel="Vorbelegtes Selectfield"
+                options="/bin/test"
+                type="select"
+                name="./select" xtype="selection"/>
         
         <arrows jcr:primaryType="nt:unstructured"
                 fieldLabel="Pfeile anzeigen" name="./arrows" xtype="checkbox"/>
